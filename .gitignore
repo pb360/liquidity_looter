@@ -4,7 +4,7 @@ ext_packages/
 machine_specific/
 local/
 .ssh/
-
+setup.py
 
 # ### below is that standard .gitignore github provieds for python repositories
 #
