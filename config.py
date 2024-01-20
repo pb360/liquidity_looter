@@ -31,9 +31,10 @@ operating_wallets = {'GNS_ETH_2_90': {'wallet': 1,
                                       'base': 'ETH',
                                       'quote': 'GNS',
                                       'pair': 'GNS/WETH_0.30',
-                                      'pair_fee': 0.3, 
-                                      'lp_width': 2, 
-                                      'p_rebalance': 85, 
+                                      'pair_fee': 0.3,
+                                      'lp_width': 2,
+                                      'p_rebalance': 85,
+                                      'gas_reserve': 0.005,
                                       },  
 
                     # 'GNS_USDC_2_90': {'wallet': 'NEED_TO_FIGURE_OUT_HOW_TO_HANDLE_THIS', 
@@ -52,11 +53,13 @@ operating_wallets = {'GNS_ETH_2_90': {'wallet': 1,
                                                    'lp_width': 2, 
                                                    'p_rebalance': 85, 
                                                    'add_liq_ui': 'https://app.camelot.exchange/liquidity/?type=v3&token1=0x82af49447d8a07e3bd95bd0d56f35241523fbab1&token2=0xaf88d065e77c8cc2239327c5edb3a432268e5831',
-                                                   }, 
+                                                   'gas_reserve': 0.005, }, 
                     }
 
 params = {}
 # params ['keys'] = keys
 params['pool_addresses'] = pool_addresses
 params['token_addresses'] = token_addresses
+params['routers'] = routers
 params['operating_wallets'] = operating_wallets
+routers

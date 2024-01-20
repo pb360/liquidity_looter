@@ -163,10 +163,11 @@ def initialize_bags_dict(public_address, base, quote, w3):
 
     bags_dict = get_actual_bags_gns_weth(public_address=public_address, w3=w3)  # TODO: rebuild this, see the fn's docstring for instructions 
 
-    eth_balance = w3.eth.get_balance(public_address)
-    eth_balance_ether = Web3.from_wei(eth_balance, 'ether')
+    eth_balance_wei = w3.eth.get_balance(public_address)
+    eth_balance_human = Web3.from_wei(eth_balance_wei, 'ether')
 
-    bags_dict['eth'] = {'wei_format': eth_balance, 'human_format': eth_balance_ether}
+    bags_dict['actual']['human_format']['eth'] =  eth_balance_human
+    bags_dict['actual']['wei_format']['eth'] = eth_balance_wei
 
     # ###PAUL TODO: belongs in class __init__ definition?  
     bags_dict['desired'] = {# ###PAUL TODO. this gests filled in later because of ordering in the notebook. Not an issue for now but maybe move around later?
